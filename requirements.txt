@@ -1,5 +1,6 @@
-fastapi==0.70.0
-uvicorn==0.15.0
-easyocr==1.4
-opencv-python==4.5.3.56
-numpy==1.21.2
+fastapi
+uvicorn
+easyocr
+opencv-python
+numpy
+python-dotenv

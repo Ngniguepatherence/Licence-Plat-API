@@ -1,1 +1,2 @@
 .vercel
+./server/__pycache__
