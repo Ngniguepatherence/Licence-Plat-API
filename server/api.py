@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 from fastapi import FastAPI, UploadFile, File
 from PIL import Image
+import uvicorn
 import easyocr
 from typing import List
 from pydantic import BaseModel, AnyHttpUrl
@@ -51,3 +52,11 @@ async def process_image(file: UploadFile = File(...)):
 @app.get("/")
 async def test_api():
     return {"message": "API is running successfully."}
+
+
+
+
+HOST = '0.0.0.0'
+
+if __name__ == "__main__":
+    uvicorn.run("api:app", host=HOST, port=8000, reload=True)
